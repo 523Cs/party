@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Styles -->
+<style>
+body {
+  background-image: url("https://i.imgur.com/lok7Wcq.png");
+  background-position: 50% 50%;
+  background-repeat: repeat;
+}
+</style>
+</head>
+<body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Party Time</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    //Function to clear the default data from the name input, won't erase user input text
+    function clearName() {
+      if (document.getElementById('nameField').value == 'First and Last Name') {
+        document.getElementById('nameField').value = '';
+      }
+    }
+    //Function to clear the default data from the phone input, won't erase user input text
+    function clearPhone() {
+      if (document.getElementById('phoneField').value == 'example: 212-123-1234') {
+        document.getElementById('phoneField').value = '';
+      }
+    }
+    //Function to bring back defautl text if name field is empty
+    function resetName() {
+      if (document.getElementById('nameField').value == '') {
+        document.getElementById('nameField').value = 'First and Last Name';
+      }
+    }
+    //Function to bring back defautl text if phone field is empty
+    function resetPhone() {
+      if (document.getElementById('phoneField').value == '') {
+        document.getElementById('phoneField').value = 'example: 212-123-1234';
+      }
+    }
+    //Function to clear the default data from the email input, won't erase user input text
+    function clearEmail() {
+      if (document.getElementById('emailField').value == 'example: apple@hotmail.com') {
+        document.getElementById('emailField').value = '';
+      }
+    }
+    //Function to bring back defautl text if email field is empty
+    function resetEmail() {
+      if (document.getElementById('emailField').value == '') {
+        document.getElementById('emailField').value = 'example: apple@hotmail.com';
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="contentWrapper">
+      <div id="fronionLogo">
+        <img src="https://i.imgur.com/oZw2pQm.png" width="450" style="text-align: center;" alt="It's Paty Time!">
+      </div>
+    </div>
+  </header>
+  <main role="main">
+    <div class="contentWrapper">
+      <form action="" method="post" name="signUpForm" id="signUpForm">
+        <fieldset id="signUp">
+          <legend>Sign up to let us know you're coming!</legend>
+
+          <label for="nameField">Name:</label>
+          <input id="nameField" name="nameField" type="text" class="textfield" value="First and Last Name" onFocus="clearName();" onBlur="resetName();">
+
+          <label for="phoneField">Phone:</label>
+          <input id="phoneField" name="phoneField" type="text" class="textfield" value="example: 212-123-1234" onFocus="clearPhone();" onBlur="resetPhone();">
+
+          <label for="emailField">Email:</label>
+          <input id="emailField" name="emailField" type="text" class="textfield" value="example: apple@hotmail.com" onFocus="clearEmail();" onBlur="resetEmail();">
+
+          <input id="submit" type="submit" name="submit" value="Sign Me Up!">
+
+        </fieldset>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div class="contentWrapper">Copyright of Clara Schepps - All Rights Reserved</div>
+  </footer>
+</body>
+
+</html>
